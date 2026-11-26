@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+body { @apply bg-slate-50 text-slate-800 antialiased; }
+.bg-mesh {
+  background:
+    radial-gradient(60rem 30rem at 10% -10%, rgba(167,139,250,.35), transparent 60%),
+    radial-gradient(50rem 30rem at 90% 0%, rgba(244,114,182,.28), transparent 60%),
+    radial-gradient(40rem 30rem at 50% 110%, rgba(56,189,248,.25), transparent 60%);
+}
+.card { @apply rounded-2xl bg-white/90 shadow-sm ring-1 ring-slate-200 backdrop-blur; }
+.btn { @apply inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold transition active:scale-[.98] disabled:opacity-50 disabled:cursor-not-allowed; }
+.btn-primary { @apply btn bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white shadow-md shadow-fuchsia-500/20 hover:brightness-110; }
+.btn-ghost { @apply btn bg-white ring-1 ring-slate-200 text-slate-700 hover:bg-slate-50; }
+.input { @apply w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-200; }
+.label { @apply text-xs font-semibold uppercase tracking-wider text-slate-500; }
+.prose-di { @apply text-sm leading-relaxed text-slate-700; }
+.prose-di h1, .prose-di h2, .prose-di h3, .prose-di h4 { @apply mt-3 mb-1 font-bold text-slate-900; }
+.prose-di h1 { @apply text-lg; } .prose-di h2 { @apply text-base; } .prose-di h3 { @apply text-sm; }
+.prose-di p { @apply my-1.5; }
+.prose-di ul { @apply my-1.5 list-disc pl-5; } .prose-di ol { @apply my-1.5 list-decimal pl-5; }
+.prose-di li { @apply my-0.5; }
+.prose-di strong { @apply text-slate-900; }
+.prose-di table { @apply my-2 w-full border-collapse text-xs; }
+.prose-di th { @apply border border-slate-200 bg-slate-100 px-2 py-1 text-left font-semibold; }
+.prose-di td { @apply border border-slate-200 px-2 py-1 align-top; }
+.prose-di code { @apply rounded bg-slate-100 px-1 text-[12px]; }
+.prose-di blockquote { @apply border-l-4 border-emerald-300 bg-emerald-50/60 px-3 py-1 my-2 text-slate-600; }
+input[type=range] { accent-color: #8b5cf6; }
+@media print {
+  .no-print { display: none !important; }
+  body { background: white; }
+}
